@@ -1,0 +1,11 @@
+commit 595ebfbbbca265d8fd2b7c82f9ec4fefe9211f30
+Author: yanirahauchbaum <yanira.hauchbaum@gmail.com>
+Date:   Fri Sep 2 11:35:17 2016 -0600
+
+    Cambio en mi readme.txt
+
+commit 42cc5902886e8d2419b02eee89ea45837f3349ab
+Author: yanirahauchbaum <yanira.hauchbaum@gmail.com>
+Date:   Tue Aug 30 11:55:23 2016 -0600
+
+    Commit inicial con readme.txt
