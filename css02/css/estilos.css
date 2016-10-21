@@ -6,6 +6,23 @@ body
 	min-width: 1078px; /*cancela movimiento de elemento*/
 }
 
+header nav
+{
+	margin-left: 250px;
+}
+
+
+header nav ul li
+{
+
+	border-bottom: 1px solid gray;
+	color: gray;
+	display: inline-block;
+	font-size: 1.8em;
+	margin-right: 15px;
+
+}
+
 header input
 {
 	float: right;
@@ -14,24 +31,69 @@ header input
 	position: relative;
 }
 
-header nav ul li
+#bgoffer
 {
-	border-bottom: 1px solid gray;
-	color: gray;
-	display: inline-block;
-	font-size: 1.8em;
-	margin-right: 15px;
-	/*text-decoration: underline;*/
 
+	position: absolute;
+	/*podemos usar atributos left right top*/
+	top: -400px;
+	left: -35px;
 }
+
 #granthams /*logo de la empresa*/
 {
-	margin-top: 20px;
-	margin-left: 20px;
+margin-top: 20px;
+margin-left: 25px;
 }
 
 #paint
 {
 	float: right;
-	margin-top: 20px;
+	margin-top: 17px;
 }
+
+#primerseccion
+{
+	margin-top: 70px;
+}
+
+#primerseccion article
+{
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 25px;
+}
+
+#secc01art01
+{
+	width: 60%;
+}
+
+#secc01art02
+{
+	width: 30%;
+}
+
+.wecanoffer
+{
+	color: #FF0099;
+	font-size: 3.35em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
