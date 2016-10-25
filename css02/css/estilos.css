@@ -6,9 +6,17 @@ body
 	min-width: 1078px; /*cancela movimiento de elemento*/
 }
 
+header input
+{
+	float: right;
+	margin-right: -200px;
+	/*margin-top: 15px;*/
+	position: relative;
+}
+
 header nav
 {
-	margin-left: 250px;
+	margin-left: 220px;
 }
 
 
@@ -20,41 +28,32 @@ header nav ul li
 	display: inline-block;
 	font-size: 1.8em;
 	margin-right: 15px;
-
-}
-
-header input
-{
-	float: right;
-	margin-right: -200px;
-	margin-top: 15px;
-	position: relative;
 }
 
 #bgoffer
 {
-
-	position: absolute;
-	/*podemos usar atributos left right top*/
-	top: -400px;
-	left: -35px;
+	position: relative;
+	top: -410px;
+	left: -35;
 }
 
 #granthams /*logo de la empresa*/
 {
-margin-top: 20px;
-margin-left: 25px;
+	margin-top: 20px;
+	margin-left: 20px;
 }
 
 #paint
 {
 	float: right;
-	margin-top: 17px;
+	margin-top: 20px;
 }
 
 #primerseccion
 {
 	margin-top: 70px;
+	/*padding-bottom: -70px;*/
+	height: 318px;
 }
 
 #primerseccion article
@@ -69,9 +68,36 @@ margin-left: 25px;
 	width: 60%;
 }
 
+#segundaseccion article
+{
+	text-align: right;
+	padding-right: 180px;
+	margin-top: 13px;
+}
+
 #secc01art02
 {
 	width: 30%;
+}
+
+#terceraseccion article
+{
+	display: inline-block;
+	width: 22%;
+	vertical-align: top;
+}
+
+.colorrosa
+{
+	color: #FF0099;
+	font-weight: bold;
+}
+
+.numerotelefono
+{
+	color: #FF0099;
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .wecanoffer
