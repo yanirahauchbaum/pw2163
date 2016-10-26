@@ -43,6 +43,11 @@ header nav ul li
 	margin-left: 20px;
 }
 
+#mailinglist
+{
+	padding-top: 60px;
+}
+
 #paint
 {
 	float: right;
@@ -80,6 +85,20 @@ header nav ul li
 	width: 30%;
 }
 
+#secc01art02 ul
+{
+	list-style: none;
+	padding-left: 10px;
+}
+
+#secc01art02 ul li:before
+{
+	content: "•";
+	padding-right: 5px;
+	color: #FF0099;
+	opacity: 0.2;
+}
+
 #terceraseccion article
 {
 	display: inline-block;
@@ -87,9 +106,29 @@ header nav ul li
 	vertical-align: top;
 }
 
+#terceraseccion article img
+{
+	vertical-align: middle;
+}
+
 .colorrosa
 {
 	color: #FF0099;
+}
+
+.colorverde
+{
+	color: #A3D948;
+}
+
+.colorazul
+{
+	color: #5880B9;
+}
+
+.colorrosa, .colorverde, .colorazul
+{
+	font-size: 1em;
 	font-weight: bold;
 }
 
