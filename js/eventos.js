@@ -6,11 +6,14 @@ var inicio = function() //Main
 		$.ajax({
   		url: 'https://randomuser.me/api/',
   		dataType: 'json',
- 		success: function(data) {
-   		$("#txtNombre").val(data.results[0].name.first+" "+data.results[0].name.last);
-   		$("#imgFoto").attr("src",data.results[0].picture.large);
-   		console.log(data.results[0].name.first+" "+data.results[0].name.last);
-    	}
+ 		success: function(data) {  //Exito
+ 			$("#imgFoto").show();
+ 			$("#txtNombre").show();
+   			$("#txtNombre").val(data.results[0].name.first+" "+data.results[0].name.last);
+   			$("#imgFoto").attr("src",data.results[0].picture.large);
+   			$("#miArticle").html("Texto");
+   			console.log(data.results[0].name.first+" "+data.results[0].name.last);
+    		}
 		});
 	}
 	$("#dameClic").on("click",dameclic);
