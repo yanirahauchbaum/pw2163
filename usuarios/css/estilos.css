@@ -28,8 +28,16 @@ header nav ul li
 	display: inline-block;
 }
 
+main article /*#artAltaUsuarios*/
+{
+	display: none;
+	margin: 0 auto;
+	width: 250px;
+}
+
 #entradaUsuario
 {
 	margin: 0 auto;
 	width: 350px;
 }
+

@@ -29,18 +29,18 @@
 	{
 		$respuesta = false;
 		$u = GetSQLValueString($_POST["usuario"],"text"); //Limpieza
-		$u = GetSQLValueString($_POST["clave"], "text"); //Limpieza
+		$c = GetSQLValueString($_POST["clave"], "text"); //Limpieza
 		$conexion = mysql_connect("localhost","root","");
 		mysql_select_db("bd2163");
-		$consulta = sprintf("select usuario,clave from usuarios where usuario=%s and clave=%s limit 1",$u,$c);
+		$consulta = sprintf("select usuario,clave from usuarios where usuario=%s and clave=%s limit 1", $u, $c);
 		$resultado = mysql_query($consulta);
 		//Esperamos un solo resultado
-		if(mysql_num_rows($resultado) == 1)
+		if(mysql_num_rows($resultado) == 0)
 		{
 			$respuesta = true;
 		}
 		$arregloJSON = array('respuesta' => $respuesta );
-		print json_decode($arregloJSON);
+		print json_encode($arregloJSON);
 
 	}
 	//Menu principal

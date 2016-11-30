@@ -1,6 +1,5 @@
 var inicioUsuarios = function()
 {
-	alert("holahola");
 	var validaUsuario = function()
 	{
 		//Extraer los datos de los input en el HTML
@@ -33,7 +32,7 @@ var inicioUsuarios = function()
 				{
 					alert("Datos incorrectos :(");					
 				}
-			}
+			},
 			error:function(xhr,ajaxOptions,thrownError){
 				//Si todo sale mal 
 			}
@@ -44,7 +43,17 @@ var inicioUsuarios = function()
 			alert("Usuario y clave son obligatorios");
 		}
 	}
-	$("#btnValidaUsuario".on("click",validaUsuario);
+	$("#btnValidaUsuario").on("click",validaUsuario);
+	var teclaClave = function(tecla)
+	{
+		if(tecla.wich == 13) //Tecla enter
+		{
+			validaUsuario(); //Función que valida al usuario
+		}
+	}
+	//keypress: se ejecuta cada vez que presiono una
+	//teclea sobre el input
+	$("#txtClave").on("keypress",teclaClave);
 }
 //Evento inicial
 $(document).on("ready",inicioUsuarios);
