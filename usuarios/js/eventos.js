@@ -51,14 +51,73 @@ var inicioUsuarios = function()
 			validaUsuario(); //Función que valida al usuario
 		}
 	}
+
 	var Alta = function()
 	{
+		$("h2").html("Alta de Usuarios");
 		$("#artAltaUsuarios").show("slow");
+		//Escondo todos los botones
+		//contenidos en artAltaUsuarios
+		$("#artAltaUsuarios > button").hide();
+		$("#btnAltaUsuario").slow();
 	}
+
+	var Baja = function()
+	{
+		$("h2").html("Baja de Usuarios");
+		$("#artBajaUsuarios").show("slow");
+		//Escondo todos los botones
+		//contenidos en artAltaUsuarios
+		$("#artBajaUsuarios > button").hide();
+		$("#btnBajaUsuario").slow();
+	}
+	var Cambio = function()
+	{
+		$("h2").html("Cambio de Usuarios");
+		$("#artCambioUsuarios").show("slow");
+		//Escondo todos los botones
+		//contenidos en artAltaUsuarios
+		$("#artCambioUsuarios > button").hide();
+		$("#btnCambioUsuario").slow();
+	}
+	var teclaUsuario = function(tecla)
+	{
+		if(tecla.which == 13) //Enter
+		{
+			var usuario = $("#txtUsuarioNombre").val();
+			var parametros = "opcion=buscaUsuario"+
+							 "&usuario="+usuario+
+							 "&id="+Math.random();
+			$.ajax({
+				cache:false,
+				type:"POST",
+				dataType:"json",
+				url:"php/utilerias.php",
+				data:parametros,
+				success:function(response){
+					if(response.respuesta == true)
+					{
+						$("#txtNombre").val(response.nombre);
+						$("#txtClaveNombre").val(response.clave);
+						$("#txtTipo option:selected").text(response.tipo);
+
+					}
+				},
+				error:function(xhr,ajaxOptions,thrownError){
+					console.log("Fallo en el servidor");
+
+				}
+			});
+		}	
+	}
+
 	//keypress: se ejecuta cada vez que presiono una
 	//teclea sobre el input
 	$("#txtClave").on("keypress",teclaClave);
 	$("#btnAlta").on("click",Alta);
+	$("#btnBaja").on("click",Baja);
+	$("#btnCambio").on("click",Cambio);
+	$("#txtUsuarioNombre").on("keypress",teclaUsuario);
 	$("#btnGuardaUsuario").on("click",GuardaUsuario);
 }
 //Evento inicial

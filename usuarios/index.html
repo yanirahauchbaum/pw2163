@@ -28,13 +28,13 @@
 				</button> 
 				</li>
 				<li>
-				<button class="btn btn-danger" id="btnAlta">
+				<button class="btn btn-danger" id="btnBaja">
 					<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
 					Baja
 				</button> 
 				</li>
 				<li>
-					<button class="btn btn-warning">
+					<button class="btn btn-warning" id="btnCambio">
 					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 					Cambio
 				</button> 
@@ -66,7 +66,7 @@
 	<main>
 		<article id="artAltaUsuarios">
 			<h2>Alta de Usuarios</h2>
-			<input type="text" id="txtUsuario" placeholder="Usuario" class="form-control">
+			<input type="text" id="txtUsuarioNombre" placeholder="Usuario" class="form-control">
 			<input type="text" id="txtNombre" placeholder="Nombre" class="form-control">
 			<input type="password" id="txtClave" placeholder="Clave" class="form-control">
 
@@ -76,7 +76,9 @@
 				<option value="invitado">Invitado</option>
 				<option value="colado">Colado</option>
 			</select>
-			<button class="btn btn-success btn-lg btn-block" id="btnGuardaUsuario">Guardar</button>
+			<button class="btn btn-success btn-lg btn-block" id="btnAltaUsuario">Guardar</button>
+			<button class="btn btn-danger btn-lg btn-block" id="btnBajaUsuario">Baja</button>
+			<button class="btn btn-warning btn-lg btn-block" id="btnCambioUsuario">Cambio</button>
 		</article>
 	</main>
 </body>
