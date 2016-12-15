@@ -44,7 +44,7 @@ var inicioUsuarios = function()
 			alert("Usuario y clave son obligatorios");
 		}
 	}
-	$("#btnValidaUsuario").on("click",validaUsuario);
+	
 	var teclaClave = function(tecla)
 	{
 		if(tecla.which == 13) //Tecla enter.
@@ -192,6 +192,7 @@ var inicioUsuarios = function()
 	//keypress: se ejecuta cada vez que presiono una 
 	//tecla sobre el input.
 	$("#txtClave").on("keypress",teclaClave);
+	$("#btnValidaUsuario").on("click",validaUsuario);
 	$("#btnAlta").on("click",Alta);
 	$("#btnBaja").on("click",Baja);
 	$("#btnCambio").on("click",Cambio);
